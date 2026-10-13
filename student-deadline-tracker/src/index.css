@@ -1,0 +1,294 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: #20243a;
+  background: #f5f7fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+.app-header {
+  padding: 32px;
+  color: white;
+  border-radius: 24px;
+  background: linear-gradient(120deg, #4338ca, #6366f1, #818cf8);
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.app-header h1 {
+  font-size: clamp(26px, 4vw, 38px);
+  margin: 12px 0;
+}
+
+.app-header p:last-child {
+  opacity: 0.9;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.assignment-form,
+.list-container {
+  background: white;
+  padding: 24px;
+  border: 1px solid #e7eaf3;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgb(36 45 90 / 5%);
+}
+
+.assignment-form h2,
+.list-header h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.assignment-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 18px 0 7px;
+}
+
+.assignment-form input,
+.assignment-form select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #dfe3ee;
+  border-radius: 9px;
+  background: white;
+  color: #20243a;
+}
+
+.assignment-form button,
+.filter-list button {
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 14px;
+  transition: 0.2s;
+}
+
+.assignment-form button {
+  width: 100%;
+  margin-top: 20px;
+  color: white;
+  background: #4f46e5;
+  font-weight: 600;
+}
+
+.assignment-form button:hover {
+  background: #3730a3;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.list-header p {
+  color: #737b91;
+  font-size: 13px;
+}
+
+.stats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.stats span {
+  background: #f1f2ff;
+  color: #4f46e5;
+  padding: 7px 10px;
+  border-radius: 8px;
+}
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.filter-list button {
+  background: #f1f3f9;
+  color: #626b80;
+  font-size: 12px;
+}
+
+.filter-list button.active {
+  background: #4f46e5;
+  color: white;
+}
+
+.assignment-list {
+  display: grid;
+  gap: 12px;
+}
+
+.assignment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+  padding: 17px;
+  border: 1px solid #e6e9f2;
+  border-radius: 13px;
+}
+
+.assignment-main {
+  display: flex;
+  gap: 12px;
+  min-width: 0;
+}
+
+.assignment-main input {
+  width: 17px;
+  height: 17px;
+  margin-top: 5px;
+  accent-color: #4f46e5;
+  flex-shrink: 0;
+}
+
+.assignment-info {
+  min-width: 0;
+}
+
+.assignment-info h3 {
+  font-size: 15px;
+  margin: 0 0 7px;
+  overflow-wrap: anywhere;
+}
+
+.assignment-info p {
+  color: #737b91;
+  font-size: 12px;
+  margin: 6px 0;
+}
+
+.assignment-info h3.completed {
+  color: #9399aa;
+  text-decoration: line-through;
+}
+
+.assignment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.priority,
+.status {
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.priority.high {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.priority.medium {
+  color: #a16207;
+  background: #fef3c7;
+}
+
+.priority.low {
+  color: #047857;
+  background: #d1fae5;
+}
+
+.status.upcoming {
+  color: #4338ca;
+  background: #e0e7ff;
+}
+
+.status.overdue {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.status.completed-status {
+  color: #047857;
+  background: #d1fae5;
+}
+
+.delete-button {
+  color: #dc2626;
+  background: #fff1f2;
+  border: 0;
+  border-radius: 7px;
+  padding: 8px 10px;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.empty {
+  text-align: center;
+  color: #737b91;
+  padding: 30px 0;
+}
+
+@media (max-width: 800px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    padding: 20px 14px 40px;
+  }
+
+  .app-header {
+    padding: 24px;
+  }
+}
